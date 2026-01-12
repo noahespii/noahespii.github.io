@@ -60,22 +60,19 @@ fadeElements.forEach((el) => observer.observe(el))
 const testimonialDots = document.querySelectorAll(".testimonial-dots button")
 const testimonials = [
   {
-    text: '"Corey transformed my car. It looks better than when I bought it. The attention to detail is unmatched. Highly recommend to anyone who cares about their vehicle."',
-    author: "Michael R.",
-    role: "BMW M4 Owner",
-    image: "/professional-man-headshot.png",
+    text: '"Absolutely phenomenal work! My car looks brand new again. The attention to detail is incredible and Corey really takes pride in his work. Highly recommend!"',
+    author: "Marcus Thompson",
+    role: "BMW M3 Owner",
   },
   {
-    text: '"Best detailing service in town. My Tesla has never looked this good. The ceramic coating was absolutely worth it!"',
-    author: "Sarah K.",
-    role: "Tesla Model S Owner",
-    image: "/professional-woman-headshot.png",
+    text: '"Best detailing service I\'ve ever used. My truck was covered in desert dust and dirt, and Corey got it looking immaculate. The clay bar treatment made such a huge difference!"',
+    author: "Jessica Rivera",
+    role: "Ford F-150 Owner",
   },
   {
-    text: '"I bring all my cars here. Corey and his team treat every vehicle like it\'s their own. Outstanding quality every single time."',
-    author: "James P.",
-    role: "Porsche 911 Owner",
-    image: "/images/testimonial-2.png",
+    text: '"I\'ve taken my Mustang to several detailers over the years, but none compare to Corey Details. The wax finish is unbelievable and the interior looks factory fresh. Worth every penny!"',
+    author: "David Chen",
+    role: "Mustang GT Owner",
   },
 ]
 
@@ -101,7 +98,6 @@ function updateTestimonial() {
     testimonialEl.querySelector(".testimonial-text").textContent = t.text
     testimonialEl.querySelector(".testimonial-author-info h4").textContent = t.author
     testimonialEl.querySelector(".testimonial-author-info p").textContent = t.role
-    testimonialEl.querySelector(".testimonial-author img").src = t.image
 
     testimonialDots.forEach((dot, i) => {
       dot.classList.toggle("active", i === currentTestimonial)
