@@ -43,9 +43,10 @@
 
   <section class="hero">
     <div class="hero-bg">
-      <video id="hero-video" autoplay muted loop playsinline preload="auto">
-        <source src="/assets/background.mp4" type="video/mp4">
+      <video autoplay muted loop playsinline onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <source src="assets/background.mp4" type="video/mp4">
       </video>
+      <img src="/placeholder.svg?height=1080&width=1920" alt="Luxury car detailing" style="display:none;">
     </div>
     <div class="hero-content">
       <span class="hero-badge">Premium Auto Care</span>
