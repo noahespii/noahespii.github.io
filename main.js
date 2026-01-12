@@ -216,3 +216,27 @@ const statsObserver = new IntersectionObserver(
 )
 
 stats.forEach((stat) => statsObserver.observe(stat))
+
+function toggleDetails(button) {
+  const detailsDiv = button.nextElementSibling
+  detailsDiv.classList.toggle("active")
+
+  if (detailsDiv.classList.contains("active")) {
+    button.textContent = "Hide Details"
+  } else {
+    button.textContent = "View Full Details"
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".hero-bg video")
+  if (video) {
+    video.addEventListener("error", () => {
+      video.style.display = "none"
+      const img = video.nextElementSibling
+      if (img) {
+        img.style.display = "block"
+      }
+    })
+  }
+})
