@@ -195,7 +195,9 @@ const statsObserver = new IntersectionObserver(
 stats.forEach((stat) => statsObserver.observe(stat))
 
 function toggleDetails(button) {
-  const detailsDiv = button.nextElementSibling
+  const packageCard = button.closest(".package-card")
+  const detailsDiv = packageCard.querySelector(".package-details-full")
+
   detailsDiv.classList.toggle("active")
 
   if (detailsDiv.classList.contains("active")) {
