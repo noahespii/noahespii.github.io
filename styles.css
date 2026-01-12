@@ -787,6 +787,7 @@ ul {
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .package-card {
