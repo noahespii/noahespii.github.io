@@ -216,4 +216,62 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   }
+
+  const lightbox = document.getElementById("lightbox")
+  const lightboxImg = lightbox.querySelector("img")
+  const lightboxClose = lightbox.querySelector(".lightbox-close")
+  const lightboxPrev = lightbox.querySelector(".lightbox-prev")
+  const lightboxNext = lightbox.querySelector(".lightbox-next")
+
+  const allGalleryImages = Array.from(document.querySelectorAll(".gallery-item img"))
+  let currentImageIndex = 0
+
+  function openLightbox(index) {
+    currentImageIndex = index
+    lightboxImg.src = allGalleryImages[currentImageIndex].src
+    lightboxImg.alt = allGalleryImages[currentImageIndex].alt
+    lightbox.classList.add("active")
+    document.body.style.overflow = "hidden"
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active")
+    document.body.style.overflow = ""
+  }
+
+  function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % allGalleryImages.length
+    lightboxImg.src = allGalleryImages[currentImageIndex].src
+    lightboxImg.alt = allGalleryImages[currentImageIndex].alt
+  }
+
+  function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + allGalleryImages.length) % allGalleryImages.length
+    lightboxImg.src = allGalleryImages[currentImageIndex].src
+    lightboxImg.alt = allGalleryImages[currentImageIndex].alt
+  }
+
+  document.querySelectorAll(".gallery-item").forEach((item, index) => {
+    item.addEventListener("click", () => {
+      openLightbox(index)
+    })
+  })
+
+  lightboxClose.addEventListener("click", closeLightbox)
+  lightboxNext.addEventListener("click", showNextImage)
+  lightboxPrev.addEventListener("click", showPrevImage)
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox()
+    }
+  })
+
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return
+
+    if (e.key === "Escape") closeLightbox()
+    if (e.key === "ArrowRight") showNextImage()
+    if (e.key === "ArrowLeft") showPrevImage()
+  })
 })
