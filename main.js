@@ -58,7 +58,7 @@ const testimonials = [
     role: "BMW M3 Owner",
   },
   {
-    text: '"Best detailing service I\'ve ever used. My truck was covered in desert dust and dirt, and Corey got it looking immaculate. The clay bar treatment made such a huge difference!"',
+    text: '"Best detailing service I\'ve ever used. The clay treatment made such a huge difference!"',
     author: "Jessica Rivera",
     role: "Ford F-150 Owner",
   },
@@ -106,7 +106,7 @@ setInterval(() => {
     currentTestimonial = (currentTestimonial + 1) % testimonials.length
     updateTestimonial()
   }
-}, 5000)
+}, 8000)
 
 const contactForm = document.getElementById("contactForm")
 
