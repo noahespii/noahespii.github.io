@@ -8,7 +8,7 @@
   --color-text: #ffffff;
   --color-text-muted: #888888;
   --color-accent: #dc2626;
-  --color-accent-hover: #ef4444;
+  --color-accent-hover: rgb(255, 0, 0);
   --color-border: #2a2a2a;
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
@@ -219,6 +219,7 @@ ul {
   position: absolute;
   inset: 0;
   z-index: -1;
+  overflow: hidden;
 }
 
 /* Added support for video background */
@@ -227,20 +228,23 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 1;
 }
 
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.95));
+  background: rgba(10, 10, 10, 0.7);
+  z-index: 1;
 }
 
 .hero-content {
   text-align: center;
   max-width: 900px;
   animation: fadeUp 1s ease-out;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-badge {
@@ -480,6 +484,8 @@ section {
 
 .about-image {
   position: relative;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .about-image img {
@@ -487,18 +493,7 @@ section {
   width: 100%;
   height: 500px;
   object-fit: cover;
-}
-
-.about-image::before {
-  content: "";
-  position: absolute;
-  top: 2rem;
-  left: -2rem;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--color-accent);
-  border-radius: 4px;
-  z-index: -1;
+  display: block;
 }
 
 .about-content .section-tag {
@@ -890,10 +885,7 @@ section {
   height: 100%;
   object-fit: cover;
   transition: var(--transition);
-}
-
-.package-card:hover .package-image img {
-  transform: scale(1.1);
+  display: block;
 }
 
 .package-content {
