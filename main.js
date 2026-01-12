@@ -1,6 +1,3 @@
-// ===== COREY DETAILS - MAIN JAVASCRIPT =====
-
-// Mobile Navigation Toggle
 const menuToggle = document.querySelector(".menu-toggle")
 const navLinks = document.querySelector(".nav-links")
 
@@ -12,7 +9,6 @@ if (menuToggle) {
   })
 }
 
-// Close mobile menu when clicking a link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     menuToggle.classList.remove("active")
@@ -21,7 +17,6 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   })
 })
 
-// Navbar scroll effect
 const navbar = document.querySelector(".navbar")
 let lastScroll = 0
 
@@ -37,7 +32,6 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll
 })
 
-// Fade-in animation on scroll
 const fadeElements = document.querySelectorAll(".fade-in")
 
 const observerOptions = {
@@ -56,7 +50,6 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach((el) => observer.observe(el))
 
-// Testimonials slider (simple implementation)
 const testimonialDots = document.querySelectorAll(".testimonial-dots button")
 const testimonials = [
   {
@@ -108,7 +101,6 @@ function updateTestimonial() {
   }, 300)
 }
 
-// Auto-rotate testimonials
 setInterval(() => {
   if (document.querySelector(".testimonials")) {
     currentTestimonial = (currentTestimonial + 1) % testimonials.length
@@ -116,27 +108,20 @@ setInterval(() => {
   }
 }, 5000)
 
-// Contact form handling
 const contactForm = document.getElementById("contactForm")
 
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    // Get form data
     const formData = new FormData(contactForm)
     const data = Object.fromEntries(formData)
 
-    // Here you would typically send this data to a server
-    console.log("Form submitted:", data)
-
-    // Show success message (simple alert for demo)
     alert("Thank you for your message! We'll get back to you soon.")
     contactForm.reset()
   })
 }
 
-// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault()
@@ -150,20 +135,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   })
 })
 
-// Gallery lightbox effect (simple implementation)
 const galleryItems = document.querySelectorAll(".gallery-item")
 
 galleryItems.forEach((item) => {
   item.addEventListener("click", () => {
     const img = item.querySelector("img")
     if (img) {
-      // Simple zoom effect - could be expanded to full lightbox
       item.classList.toggle("zoomed")
     }
   })
 })
 
-// Add hover parallax effect to hero image
 const heroBg = document.querySelector(".hero-bg img")
 
 if (heroBg) {
@@ -178,7 +160,6 @@ if (heroBg) {
   })
 }
 
-// Animate stats counter
 const stats = document.querySelectorAll(".stat h4")
 
 const animateCounter = (el) => {
