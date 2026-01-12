@@ -896,12 +896,15 @@ ul {
 .package-details-full {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  opacity: 0;
   margin-bottom: 1.5rem;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0;
 }
 
 .package-details-full.active {
-  max-height: none;
+  max-height: 2500px;
+  opacity: 1;
   padding-bottom: 1.5rem;
 }
 
