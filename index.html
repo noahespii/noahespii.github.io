@@ -13,7 +13,20 @@
 <body>
   <!-- Navigation -->
   <nav class="navbar">
-    <a href="index.html" class="logo">Corey<span>Details</span></a>
+    <div class="logo-social-container">
+      <a href="index.html" class="logo">Corey<span>Details</span></a>
+      <div class="nav-social-links">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="packages.html">Packages</a></li>
@@ -31,7 +44,10 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="/placeholder.svg?height=1080&width=1920" alt="Luxury car detailing">
+      <video autoplay muted loop playsinline onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <source src="background.mp4" type="video/mp4">
+      </video>
+      <img src="/placeholder.svg?height=1080&width=1920" alt="Luxury car detailing" style="display:none;">
     </div>
     <div class="hero-content">
       <span class="hero-badge">Premium Auto Care</span>
@@ -109,7 +125,7 @@
   <!-- About Section -->
   <section class="about fade-in" style="padding: 6rem 5%;">
     <div class="about-image">
-      <img src="/placeholder.svg?height=600&width=800" alt="Corey detailing a car">
+      <img src="aboutus.png" alt="Corey detailing a car" onerror="this.src='/placeholder.svg?height=600&width=800'">
     </div>
     <div class="about-content">
       <span class="section-tag">About Us</span>
@@ -141,12 +157,11 @@
     </div>
     <div class="testimonials-slider">
       <div class="testimonial fade-in">
-        <p class="testimonial-text">"Corey transformed my car. It looks better than when I bought it. The attention to detail is unmatched. Highly recommend to anyone who cares about their vehicle."</p>
+        <p class="testimonial-text">Review preview 1</p>
         <div class="testimonial-author">
-          <img src="/placeholder.svg?height=60&width=60" alt="Michael R.">
           <div class="testimonial-author-info">
-            <h4>Michael R.</h4>
-            <p>BMW M4 Owner</p>
+            <h4>Review preview 1</h4>
+            <p>Review preview 1</p>
           </div>
         </div>
       </div>
@@ -167,31 +182,31 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item fade-in">
-        <img src="/placeholder.svg?height=600&width=800" alt="Detailed Porsche 911">
+        <img src="mainpicture.png" alt="Main project showcase" onerror="this.src='/placeholder.svg?height=600&width=800'">
         <div class="gallery-overlay">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
         </div>
       </div>
       <div class="gallery-item fade-in">
-        <img src="/placeholder.svg?height=400&width=400" alt="Interior detailing">
+        <img src="picture1.png" alt="Detailing project 1" onerror="this.src='/placeholder.svg?height=400&width=400'">
         <div class="gallery-overlay">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
         </div>
       </div>
       <div class="gallery-item fade-in">
-        <img src="/placeholder.svg?height=400&width=400" alt="Ceramic coating">
+        <img src="picture2.png" alt="Detailing project 2" onerror="this.src='/placeholder.svg?height=400&width=400'">
         <div class="gallery-overlay">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
         </div>
       </div>
       <div class="gallery-item fade-in">
-        <img src="/placeholder.svg?height=400&width=400" alt="Paint correction">
+        <img src="picture3.png" alt="Detailing project 3" onerror="this.src='/placeholder.svg?height=400&width=400'">
         <div class="gallery-overlay">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
         </div>
       </div>
       <div class="gallery-item fade-in">
-        <img src="/placeholder.svg?height=400&width=400" alt="Wheel detailing">
+        <img src="picture4.png" alt="Detailing project 4" onerror="this.src='/placeholder.svg?height=400&width=400'">
         <div class="gallery-overlay">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
         </div>
@@ -218,13 +233,13 @@
         <a href="index.html" class="logo">Corey<span>Details</span></a>
         <p>Premium auto detailing services that bring out the best in your vehicle. Quality work, every time.</p>
         <div class="social-links">
-          <a href="#" aria-label="Instagram">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </a>
-          <a href="#" aria-label="Facebook">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="#" aria-label="TikTok">
+          <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
           </a>
         </div>
@@ -258,10 +273,6 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Corey Details. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
     </div>
   </footer>
 
