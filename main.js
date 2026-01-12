@@ -208,35 +208,6 @@ function toggleDetails(button) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const video = document.querySelector(".hero-bg video")
-  if (video) {
-    video.muted = true
-    video.playsInline = true
-
-    const playVideo = () => {
-      video.play().catch(() => {
-        video.style.display = "none"
-        const img = video.nextElementSibling
-        if (img) {
-          img.style.display = "block"
-        }
-      })
-    }
-
-    playVideo()
-
-    document.addEventListener("touchstart", playVideo, { once: true })
-    document.addEventListener("click", playVideo, { once: true })
-
-    video.addEventListener("error", () => {
-      video.style.display = "none"
-      const img = video.nextElementSibling
-      if (img) {
-        img.style.display = "block"
-      }
-    })
-  }
-
   const lightbox = document.getElementById("lightbox")
   const lightboxImg = lightbox.querySelector("img")
   const lightboxClose = lightbox.querySelector(".lightbox-close")
