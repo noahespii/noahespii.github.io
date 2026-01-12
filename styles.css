@@ -220,6 +220,26 @@ ul {
   opacity: 1;
 }
 
+.hero-bg video {
+  pointer-events: none;
+}
+
+.hero-bg video::-webkit-media-controls {
+  display: none !important;
+}
+
+.hero-bg video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+.hero-bg video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+.hero-bg video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+
 .hero-bg::after {
   content: "";
   position: absolute;
