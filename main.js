@@ -147,6 +147,12 @@ galleryItems.forEach((item) => {
 })
 
 const heroBg = document.querySelector(".hero-bg img")
+const heroVideo = document.getElementById("hero-video")
+if (heroVideo) {
+  heroVideo.muted = true
+  heroVideo.playsInline = true
+  heroVideo.play().catch(() => {})
+}
 
 if (heroBg) {
   document.querySelector(".hero").addEventListener("mousemove", (e) => {
