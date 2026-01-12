@@ -901,7 +901,8 @@ ul {
 }
 
 .package-details-full.active {
-  max-height: 2000px;
+  max-height: none;
+  padding-bottom: 1.5rem;
 }
 
 .package-section {
