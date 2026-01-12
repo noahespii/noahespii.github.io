@@ -13,7 +13,20 @@
 <body>
   <!-- Navigation -->
   <nav class="navbar">
-    <a href="index.html" class="logo">Corey<span>Details</span></a>
+    <div class="logo-social-container">
+      <a href="index.html" class="logo">Corey<span>Details</span></a>
+      <div class="nav-social-links">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="packages.html" class="active">Packages</a></li>
@@ -38,46 +51,125 @@
   <!-- Packages Section -->
   <section style="padding: 4rem 5%;">
     <div class="packages-grid">
-      <!-- Essential Package -->
+      <!-- Standard Detail Package -->
       <div class="package-card fade-in">
         <div class="package-image">
-          <img src="/placeholder.svg?height=400&width=600" alt="Essential Package">
+          <img src="/placeholder.svg?height=400&width=600" alt="Standard Detail Package">
         </div>
         <div class="package-content">
-          <h3>Essential Wash</h3>
+          <h3>Standard Detail</h3>
           <div class="package-price">
             <span class="currency">$</span>
-            <span class="amount">75</span>
+            <span class="amount">80</span>
             <span class="starting">starting</span>
           </div>
-          <ul class="package-features">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Hand wash & dry
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Wheel cleaning
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Tire dressing
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Window cleaning
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Interior vacuum
-            </li>
-          </ul>
+          <button class="package-details-toggle" onclick="toggleDetails(this)">View Full Details</button>
+          <div class="package-details-full">
+            <div class="package-section">
+              <h4>Exterior</h4>
+              <ul>
+                <li>Pre-wash</li>
+                <li>100% Hand Wash</li>
+                <li>Air and Towel Dry</li>
+                <li>Wheels & Tires</li>
+                <li>Door & Trunk Jambs + Gas Cap</li>
+                <li>Ceramic Spray Wax (2-4 Weeks Of Protection)</li>
+                <li>Windows Inside and Out</li>
+                <li>Tire Shine</li>
+              </ul>
+            </div>
+            <div class="package-section">
+              <h4>Interior</h4>
+              <ul>
+                <li>Blow Out</li>
+                <li>Wipe Down</li>
+                <li>Vacuum + Trunk (Must Be Empty)</li>
+                <li>UV Protection</li>
+                <li>Air Freshner (Optional)</li>
+              </ul>
+            </div>
+            <div class="package-pricing-info">
+              <h4>Duration: 1-2 Hours</h4>
+              <div class="package-pricing-item">
+                <span>Couple / Sedan</span>
+                <span>$80</span>
+              </div>
+              <div class="package-pricing-item">
+                <span>Small SUV</span>
+                <span>$90</span>
+              </div>
+              <div class="package-pricing-item">
+                <span>Large SUV/Truck</span>
+                <span>$100</span>
+              </div>
+              <p class="package-note">* Prices will increase for excessive dirt and staining</p>
+            </div>
+          </div>
           <a href="booking.html" class="btn btn-secondary">Book Now</a>
         </div>
       </div>
 
-      <!-- Full Detail Package -->
+      <!-- Clay & Seal Package -->
       <div class="package-card featured fade-in">
+        <div class="package-image">
+          <img src="/placeholder.svg?height=400&width=600" alt="Clay & Seal Package">
+        </div>
+        <div class="package-content">
+          <h3>Clay & Seal (WAX)</h3>
+          <div class="package-price">
+            <span class="currency">$</span>
+            <span class="amount">150</span>
+            <span class="starting">starting</span>
+          </div>
+          <button class="package-details-toggle" onclick="toggleDetails(this)">View Full Details</button>
+          <div class="package-details-full">
+            <div class="package-section">
+              <h4>Exterior</h4>
+              <ul>
+                <li>Pre-wash</li>
+                <li>100% Hand Wash</li>
+                <li>Air and Towel Dry</li>
+                <li>Wheels & Tires</li>
+                <li>Door & Trunk Jambs + Gas Cap</li>
+                <li>Windows Inside and Out</li>
+                <li>Tire Shine</li>
+                <li>Iron Decontamination</li>
+                <li>Claybar Treatment</li>
+                <li>Ceramic Sealant (6 Months Of Protection)</li>
+              </ul>
+            </div>
+            <div class="package-section">
+              <h4>Interior</h4>
+              <ul>
+                <li>Blowout</li>
+                <li>Vacuum</li>
+                <li>UV Protection</li>
+                <li>Air Freshener (Optional)</li>
+              </ul>
+            </div>
+            <div class="package-pricing-info">
+              <h4>Duration: 1-2 Hours</h4>
+              <div class="package-pricing-item">
+                <span>Couple / Sedan</span>
+                <span>$150</span>
+              </div>
+              <div class="package-pricing-item">
+                <span>Small SUV</span>
+                <span>$170</span>
+              </div>
+              <div class="package-pricing-item">
+                <span>Large SUV/Truck</span>
+                <span>$200</span>
+              </div>
+              <p class="package-note">* Prices will increase for excessive dirt and staining</p>
+            </div>
+          </div>
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Full Detail Package -->
+      <div class="package-card fade-in">
         <div class="package-image">
           <img src="/placeholder.svg?height=400&width=600" alt="Full Detail Package">
         </div>
@@ -85,77 +177,56 @@
           <h3>Full Detail</h3>
           <div class="package-price">
             <span class="currency">$</span>
-            <span class="amount">199</span>
+            <span class="amount">325</span>
             <span class="starting">starting</span>
           </div>
-          <ul class="package-features">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Everything in Essential
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Clay bar treatment
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Machine polish
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Interior deep clean
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Leather conditioning
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Sealant protection
-            </li>
-          </ul>
-          <a href="booking.html" class="btn btn-primary">Book Now</a>
-        </div>
-      </div>
-
-      <!-- Premium Package -->
-      <div class="package-card fade-in">
-        <div class="package-image">
-          <img src="/placeholder.svg?height=400&width=600" alt="Premium Package">
-        </div>
-        <div class="package-content">
-          <h3>Premium Ceramic</h3>
-          <div class="package-price">
-            <span class="currency">$</span>
-            <span class="amount">499</span>
-            <span class="starting">starting</span>
+          <button class="package-details-toggle" onclick="toggleDetails(this)">View Full Details</button>
+          <div class="package-details-full">
+            <div class="package-section">
+              <h4>Exterior</h4>
+              <ul>
+                <li>Pre-wash</li>
+                <li>100% Hand Wash</li>
+                <li>Air and Towel Dry</li>
+                <li>Wheels & Tires</li>
+                <li>Door & Trunk Jambs + Gas Cap</li>
+                <li>Windows Inside and Out</li>
+                <li>Tire Shine</li>
+                <li>Iron Decontamination</li>
+                <li>Claybar Treatment</li>
+                <li>Ceramic Sealant (6 Months Of Protection)</li>
+              </ul>
+            </div>
+            <div class="package-section">
+              <h4>Interior</h4>
+              <ul>
+                <li>Blowout</li>
+                <li>Vacuum</li>
+                <li>UV Protection</li>
+                <li>Air Freshener (Optional)</li>
+                <li>Steam Clean</li>
+                <li>Interior Scrub Down</li>
+                <li>Clean Cracks / Crevices</li>
+                <li>Shampoo / Hot Water Extractions (Seats, Floor, Mats)</li>
+              </ul>
+            </div>
+            <div class="package-pricing-info">
+              <h4>Duration: 2-4 Hours</h4>
+              <div class="package-pricing-item">
+                <span>Couple / Sedan</span>
+                <span>$325</span>
+              </div>
+              <div class="package-pricing-item">
+                <span>Small SUV</span>
+                <span>$350</span>
+              </div>
+              <div class="package-pricing-item">
+                <span>Large SUV/Truck</span>
+                <span>$375</span>
+              </div>
+              <p class="package-note">* Prices will increase for excessive dirt and staining</p>
+            </div>
           </div>
-          <ul class="package-features">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Everything in Full Detail
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Paint correction
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Ceramic coating (2yr)
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Glass coating
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Wheel coating
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Interior protection
-            </li>
-          </ul>
           <a href="booking.html" class="btn btn-secondary">Book Now</a>
         </div>
       </div>
@@ -224,13 +295,13 @@
         <a href="index.html" class="logo">Corey<span>Details</span></a>
         <p>Premium auto detailing services that bring out the best in your vehicle. Quality work, every time.</p>
         <div class="social-links">
-          <a href="#" aria-label="Instagram">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </a>
-          <a href="#" aria-label="Facebook">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="#" aria-label="TikTok">
+          <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
           </a>
         </div>
@@ -264,10 +335,6 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Corey Details. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
     </div>
   </footer>
 
